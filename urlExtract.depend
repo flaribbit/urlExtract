@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1533546777 source:d:\users\flyz\desktop\bmp\urlextract\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"resource.h"
+
+1533546810 d:\users\flyz\desktop\bmp\urlextract\resource.h
+
+1533546810 source:d:\users\flyz\desktop\bmp\urlextract\resource.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1533555733 source:d:\users\flyz\desktop\urlextract\resource.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1533555733 d:\users\flyz\desktop\urlextract\resource.h
+
+1533551244 source:d:\users\flyz\desktop\urlextract\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"resource.h"
+	"utils.h"
+
+1533551255 d:\users\flyz\desktop\urlextract\utils.h
+
+1533554296 source:d:\users\flyz\desktop\urlextract\utils.cpp
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<windows.h>
+	<commctrl.h>
+	"resource.h"
+	"utils.h"
+
+1533649677 source:d:\工程\c语言代码\urlextract\main.cpp
+	<windows.h>
+	<commctrl.h>
+	<stdio.h>
+	"resource.h"
+	"utils.h"
+
+1533741481 d:\工程\c语言代码\urlextract\resource.h
+
+1533551255 d:\工程\c语言代码\urlextract\utils.h
+
+1533640247 source:d:\工程\c语言代码\urlextract\resource.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1533649915 source:d:\工程\c语言代码\urlextract\utils.cpp
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<windows.h>
+	<commctrl.h>
+	"resource.h"
+	"utils.h"
+
