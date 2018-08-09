@@ -28,6 +28,7 @@ void GetTxtFileName(char *har,char *txt){
 void GetURL(HWND hwndDlg,char *harfile,char *txtfile){
 	FILE *har,*txt;
 	char c,url[MAXLEN],msg[MAXLEN],delpar,*p;
+	char inc[MAXLEN],ninc[MAXLEN],filter_inc,filter_ninc;
 	int harlen,cnt=0;
 	if(strlen(harfile)==0){
 		MessageBox(hwndDlg,"输入文件名不能为空！","警告",MB_ICONWARNING|MB_OK);
@@ -52,6 +53,10 @@ void GetURL(HWND hwndDlg,char *harfile,char *txtfile){
 	harlen=GetFileSize(har,0)/100;
 	//printf("%d\n",harlen);
 	delpar=IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX2);
+	if(filter_inc=IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX5))
+		GetDlgItemText(hwndDlg,IDC_EDIT3,inc,MAXLEN);
+	if(filter_ninc=IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX6))
+		GetDlgItemText(hwndDlg,IDC_EDIT4,ninc,MAXLEN);
 	//提取链接
 	while(!feof(har)){
 		c=fgetc(har);
@@ -66,8 +71,10 @@ void GetURL(HWND hwndDlg,char *harfile,char *txtfile){
 				}
 				p++;
 			}
-			fprintf(txt,"%s\n",url);
-			cnt++;
+			if(!(filter_inc&&strstr(url,inc)==0)&&!(filter_ninc&&strstr(url,ninc))){
+				fprintf(txt,"%s\n",url);
+				cnt++;
+			}
 			//刷新进度条
 			SendDlgItemMessage(hwndDlg,IDC_PROGRESS1,PBM_SETPOS,ftell(har)/harlen,0);
 		}

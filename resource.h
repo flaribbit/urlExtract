@@ -13,3 +13,7 @@
 #define IDC_CHECKBOX2                           40006
 #define IDC_CHECKBOX3                           40007
 #define IDC_CHECKBOX4                           40008
+#define IDC_CHECKBOX5                           40009
+#define IDC_CHECKBOX6                           40010
+#define IDC_EDIT3                               40012
+#define IDC_EDIT4                               40013

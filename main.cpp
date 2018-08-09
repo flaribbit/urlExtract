@@ -34,12 +34,18 @@ BOOL CALLBACK DlgMain(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 					GetTxtFileName(filename,filename_txt);
 					SetDlgItemText(hwndDlg,IDC_EDIT2,filename_txt);
 				}
-			break;
+				break;
 			case IDC_BUTTON2:
 				GetDlgItemText(hwndDlg,IDC_EDIT1,filename,MAXLEN);
 				GetDlgItemText(hwndDlg,IDC_EDIT2,filename_txt,MAXLEN);
 				GetURL(hwndDlg,filename,filename_txt);
-			break;
+				break;
+			case IDC_CHECKBOX5:
+				EnableWindow(GetDlgItem(hwndDlg,IDC_EDIT3),IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX5));
+				break;
+			case IDC_CHECKBOX6:
+				EnableWindow(GetDlgItem(hwndDlg,IDC_EDIT4),IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX6));
+				break;
 		}
 	}
 	return TRUE;
