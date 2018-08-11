@@ -50,8 +50,10 @@ void GetURL(HWND hwndDlg,char *harfile,char *txtfile){
 		return;
 	}
 	//获取文件大小
-	harlen=GetFileSize(har,0)/100;
-	//printf("%d\n",harlen);
+	//harlen=GetFileSize(har,0)/100;
+	fseek(har,0,SEEK_END);
+	harlen=ftell(har)/100;
+	fseek(har,0,SEEK_SET);
 	delpar=IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX2);
 	if(filter_inc=IsDlgButtonChecked(hwndDlg,IDC_CHECKBOX5))
 		GetDlgItemText(hwndDlg,IDC_EDIT3,inc,MAXLEN);
